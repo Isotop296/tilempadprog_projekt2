@@ -3,7 +3,6 @@ import speech_recognition as sr
 from tkinter import messagebox
 import os
 
-
 def speech_to_text():
    r = sr.Recognizer()
    with sr.Microphone() as source:
@@ -22,6 +21,7 @@ def reset_text_to_speech():
   
   
 def exit_text_to_speech():
+  
   
   
    
