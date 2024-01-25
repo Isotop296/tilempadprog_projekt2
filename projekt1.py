@@ -15,7 +15,17 @@ def speech_to_text():
       except sr.RequestError as e:
         txtSpeech.insert(tk.END, "Error: {0}\n".format(e))
   
+def reset_text_to_speech():
+  txtSpeech .delete("1,0", tk.END)
   
+  
+  
+def exit_text_to_speech():
+    result = messagebox.askquestion("exit system", "confirm if you want to exit")
+    if result == 'yes':
+      messagebox.showinfo("goodbye", "good bye")
+      root.destroy()
+    
    
 root = tk.Tk()
 root.title("speech to text")
@@ -33,10 +43,10 @@ txtSpeech.pack()
 btnConvert = tk.Button(MainFrame, font = ("ariel", 30, "bold"), text = ("convert to text"), width = 20, height=2, command = speech_to_text)
 btnConvert.pack(side = tk.LEFT, padx=5)
 
-btnReset = tk.Button(MainFrame, font = ("ariel", 30, "bold"), text = ("reset text"), width = 20, height=2 )
+btnReset = tk.Button(MainFrame, font = ("ariel", 30, "bold"), text = ("reset text"), width = 20, height=2, command = reset_text_to_speech)
 btnReset.pack(side = tk.LEFT, padx=5)
 
-btnExit = tk.Button(MainFrame, font = ("ariel", 30, "bold"), text = ("exit"), width = 20, height=2)
+btnExit = tk.Button(MainFrame, font = ("ariel", 30, "bold"), text = ("exit"), width = 20, height=2, command = exit_text_to_speech)
 btnExit.pack(side = tk.LEFT, padx=5)
 
 root.mainloop()
