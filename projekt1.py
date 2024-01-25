@@ -14,14 +14,6 @@ def speech_to_text():
         txtSpeech.insert(tk.END, "could not understand audio\n")
       except sr.RequestError as e:
         txtSpeech.insert(tk.END, "Error: {0}\n".format(e))
-        
-def reset_text_to_speech():
-  
-  
-  
-  
-def exit_text_to_speech():
-  
   
   
    
