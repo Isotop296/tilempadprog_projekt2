@@ -6,7 +6,7 @@ import os
 import openai #used for open ai, dont know i its relly neded
 import requests  # To send HTTP requests
 from gtts import gTTS  # Googles text to speech library
-from dotenv import load_dotenv #this is used to take in the api key from another file
+from dotenv import load_dotenv #this is used to take in the api key from another file, i used it so that me api key to chat gpt would be safe and not be upploaded to github. gitignore is used so that .env isent upploaded to github witch contains my api key
 
 load_dotenv()# starts the dotenv 
 openai.api_key = os.getenv("OPENAI_API_KEY")#gets the api key an sets it as a wolrld key within the openai import
