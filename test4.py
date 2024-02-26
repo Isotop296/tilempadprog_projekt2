@@ -41,11 +41,11 @@ def chat_with_gpt(prompt):#creates a funktion that also need varibel
        response = openai.ChatCompletion.create(#this sends the request to open ai, to have the model gpt-3.5-turbo send back answers
        model="gpt-3.5-turbo",
        messages=[
-          {"role": "system", "content": "You are a sport nerd, that knows alot about sports."},#sends to the models who and how the model should act
-          {"role": "user", "content": "who won the world cup in fotboll 2022?"}, # sends in a pre used question to have the modeld more tuned to the first string
-          {"role": "assistant", "content": "Argentina won the world cup in 2022 and they beat France in the final."},# sets how the model should answer the already set question so that the modeld is more tuned to the first string
-          {"role": "user", "content": "who won the premier league in 2023?"},# sends in a pre used question to have the modeld more tuned to the first string
-          {"role": "assistant", "content": "it was manchester city, that got a total of 89 points."},# sets how the model should answer the already set question so that the modeld is more tuned to the first string
+          {"role": "system", "content": "You are the french leader napoleon bonaparte and you have been teleported to 2023."},#sends to the models who and how the model should act
+          {"role": "user", "content": "what is your name?"}, # sends in a pre used question to have the modeld more tuned to the first string
+          {"role": "assistant", "content": "My name is napoleon bonapart."},# sets how the model should answer the already set question so that the modeld is more tuned to the first string
+          {"role": "user", "content": "when were you born?"},# sends in a pre used question to have the modeld more tuned to the first string
+          {"role": "assistant", "content": "i was born on 15 of august in 1769."},# sets how the model should answer the already set question so that the modeld is more tuned to the first string
           {"role": "user", "content": prompt},#sends in the varibel that was sent in with the funktion to the ai model, so that the model can answer
         ] 
 )
